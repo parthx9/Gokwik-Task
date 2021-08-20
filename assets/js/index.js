@@ -2,6 +2,7 @@ let userDetails = {
   number: 9013941010,
   amount: 599
 }
+let notifications = true
 
 
 // HANDLE LINK SENT
@@ -23,14 +24,17 @@ const handleSubmit = () => {
 }
 
 
+
 // CHECK OS [ANDROID, iOS, DESKTOP]
 const checkOS = () => {
-  if (navigator.platform === 'Android') {
+
+  console.log(/mobile|android/i.test(navigator.userAgent))
+  if (/Android/.test(navigator.userAgent)) {
     console.log(navigator.platform)
     console.log('android')
   }
-  else if (['iOS', 'iPad', 'iPhone', 'iPod'].includes(navigator.platform)) {
-    console.log(navigator.platform)
+  else if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+    console.log('iOS')
     document.getElementById('paytm').style.display = 'none';
     document.getElementById('bhim').style.display = 'none';
   }
@@ -45,10 +49,10 @@ const checkOS = () => {
 }
 
 
-// HANLDE UP PAY
+// HANLDE UPI PAY
 const handlePay = (q) => {
 
-  fetch('http://localhost:8080/send', {
+  fetch(`http://localhost:8080/${q}`, {
     headers: {
       'Accept': 'application/json',
       'Content-type': 'application/json'
@@ -67,6 +71,8 @@ let phoneInput = document.getElementById('phone')
 // AMOUNT ELEMENT
 let totalAmountEl = document.getElementsByClassName('total-amount')[0]
 
+// Notification CheckBox
+let notiCheck = document.getElementById('noti-check')
 
 // ONLOAD
 window.onload = () => {
@@ -76,6 +82,17 @@ window.onload = () => {
   phoneInput.addEventListener('keyup', (e) => {
     userDetails.number = phoneInput.value
     console.log(userDetails.number)
+  })
+
+  notiCheck.addEventListener('click', (e) => {
+    if (e.target.checked) {
+      notifications = true
+      console.log('notifications on', notifications)
+    }
+    else {
+      notifications = false
+      console.log('notifications on', notifications)
+    }
   })
 
   totalAmountEl.innerHTML = `₹${userDetails.amount}`
