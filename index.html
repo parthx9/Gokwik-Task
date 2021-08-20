@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <script src="https://kit.fontawesome.com/efde882620.js" crossorigin="anonymous"></script>
+  <title>Gokwik</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="main">
+      <!-- HEADER -->
+      <section class="header">
+        <div class="back-btn">
+          <span class="fa fa-long-arrow-alt-left"></span>
+        </div>
+        <div class="logo">
+          <img src="./assets/imgs/logo.png" width="100px" />
+        </div>
+      </section>
+      <!-- MAIN CONTENT -->
+      <section class="content">
+        <!-- AMOUNT AREA -->
+        <div class="amount">
+          <p>
+            Amount to Pay: <span class="total-amount"></span>
+          </p>
+        </div>
+        <!-- PAYMENTS SECTION -->
+        <div class="payment">
+          <p>
+            Pay Using UPI Apps
+          </p>
+          <div class="payment-btns">
+            <div id="paytm" onclick="handlePay('Paytm')" class="payment-btn">
+              <span class="logo"><img /></span> <span class="name">Paytm</span> <span
+                class="fa fa-angle-double-right proceed"></span>
+            </div>
+            <div id="googlepay" onclick="handlePay('Google Pay')" class="payment-btn">
+              <span class="logo"><img /></span> <span class="name">Google Pay</span> <span
+                class="fa fa-angle-double-right proceed"></span>
+            </div>
+            <div id="phonepe" onclick="handlePay('PhonePe')" class="payment-btn">
+              <span class="logo"><img /></span> <span class="name">PhonePe</span> <span
+                class="fa fa-angle-double-right proceed"></span>
+            </div>
+            <div id="bhim" onclick="handlePay('BHIM')" class="payment-btn">
+              <span class="logo"><img /></span> <span class="name">BHIM</span> <span
+                class="fa fa-angle-double-right proceed"></span>
+            </div>
+          </div>
+          <!-- OR HRS -->
+          <div class="or-area">
+            <hr>
+            </hr>
+            <p>Or</p>
+            <hr>
+            </hr>
+          </div>
+          <!-- SEND LINK -->
+          <div class="send-link">
+            <p>
+              Get Payment Link
+            </p>
+            <p class="subtext">
+              You'll get a payment link on
+            </p>
+            <div class="input-num">
+              <input placeholder="Enter you number..." value="" id="phone" min="10" max=12 type="number"></input>
+              <button onclick="handleSubmit()" class="send-btn">Send</button>
+            </div>
+          </div>
+        </div>
+        <!-- NOTIFICATIONS -->
+        <div class="notifications">
+          <div class="info">
+            <p>
+              Get Whatsapp &amp; SMS updates
+            </p>
+            <p class="subtext">Click on this to turn off updates</p>
+          </div>
+          <input type="checkbox" />
+        </div>
+      </section>
+      <!-- FOOTER -->
+      <section class="footer">
+        <p>
+          Powered by
+        </p>
+        <img src="./assets/imgs/gokwik.svg" height="30px" />
+      </section>
+    </div>
+  </div>
+
+  <script src="./assets/js/index.js"></script>
+</body>
+
+</html>

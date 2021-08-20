@@ -1,0 +1,162 @@
+*{
+  margin: 0%;
+  padding: 0%;
+}
+
+body{
+  font-family: sans-serif !important;
+}
+.subtext{
+  color: gray;
+  font-weight: 500 !important;
+}
+p{
+  font-weight: 700;
+  /* color: gray; */
+  font-size: 0.9rem;
+}
+.container{
+  max-width: 400px;
+  margin: 0% auto;
+  height: 80%;
+  overflow: auto;
+  max-height: 80%;
+}
+
+/* HEADER */
+.header{
+  border-bottom: 2px solid whitesmoke;
+  display: flex;
+  padding: 0.5rem 1rem;
+  margin: 0px 1rem;
+  align-items: center;
+}
+.header .fa{
+  color: gray;
+  margin-right: 1rem;
+}
+
+/* CONTENT */
+
+.amount{
+  margin: 0.5rem 0rem;
+  padding: 0.5rem 1rem;
+}
+.amount p{
+  color: gray;
+  font-size: 0.9rem;
+  font-family: 500;
+}
+.amount .total-amount{
+  color: rgb(0, 175, 239);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.payment{
+  padding: 0.5rem 1rem;
+  background: #e8f4f8;
+}
+.payment p{
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.payment-btns{
+  margin: 1rem 0rem;
+}
+.no-options{
+  text-align: center;
+}
+.payment-btn{
+  font-size: 0.9rem;
+  font-weight: 700;
+  display: flex;
+  cursor: pointer;
+  border-radius: 10px;
+  color: #fff;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.5rem;
+  align-items: center;
+  background: #004b8d;;
+}
+.payment-btn .proceed{
+  margin-left: auto;
+}
+.or-area{
+  display: flex;
+  align-items: center;
+}
+.or-area p{
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: gray;
+  margin: 0rem 0.5rem;
+}
+.or-area hr{
+  height: 2px;
+  border: none;
+  background: gray;
+  width: 100%;
+}
+.send-link{
+  margin: 1.5rem 0rem;
+}
+.send-link .subtext{
+  margin-top: 0.5rem;
+}
+.send-link .input-num{
+  display: flex;
+  margin: 1rem 0rem;
+  /* width: 100%; */
+}
+.send-link .input-num input:focus{
+  outline: none;
+}
+.send-link .input-num input{
+  width: 100%;
+  font-size: 1.2rem;
+  color: #004b8d;
+  background: transparent;
+  border-bottom: 1px solid gray !important;
+  padding: 0.5rem 1rem;
+  border: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.send-link .send-btn{
+  background: none;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 1rem;
+  width: 100px;
+  color: #004b8d;
+  border-radius: 6px;
+  border: 2px solid #004b8d;
+}
+.notifications{
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.notifications .subtext{
+  margin-top: 0.5rem;
+}
+/* FOOTER */
+.footer{
+  padding: 1rem 0rem;
+  display: flex;
+  justify-content: center;
+  background: #004b8d;
+  align-items: center;
+}
+.footer p{
+  color: #fff !important;
+  font-weight: 700 !important;
+  margin-right: 1rem;
+}
